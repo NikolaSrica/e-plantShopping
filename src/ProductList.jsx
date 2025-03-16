@@ -257,15 +257,11 @@ function ProductList({ onHomeClick }) {
     };
 
     const handleAddToCart = (product) => {
-        debugger
   dispatch(addItem(product));
   setAddedToCart((prevState) => ({
      ...prevState,
      [product.name]: true, // Set the product name as key and value as true to indicate it's added to cart
    }));
-
-   debugger
-   console.log(addedToCart);
 };
     return (
         <div>
@@ -290,8 +286,8 @@ function ProductList({ onHomeClick }) {
             {!showCart ? (
                 <div className="product-grid">
     {plantsArray.map((category, index) => (
-    <div key={index}>
-        <h1><div>{category.category}</div></h1>
+    <div className="title-container" key={index}>
+        <h1>{category.category}</h1>
         <div className="product-list">
             {category.plants.map((plant, plantIndex) => (
             <div className="product-card" key={plantIndex}>
