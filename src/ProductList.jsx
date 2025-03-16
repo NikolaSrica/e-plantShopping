@@ -296,6 +296,7 @@ function ProductList({ onHomeClick }) {
             {category.plants.map((plant, plantIndex) => (
             <div className="product-card" key={plantIndex}>
                 <img className="product-image" src={plant.image} alt={plant.name} />
+                <div className="cart-item-cost product-price">{plant.cost}</div>
                 <div className="product-title">{plant.name}</div>
                 {/*Similarly like the above plant.name show other details like description and cost*/}
                 <button  className="product-button" onClick={() => handleAddToCart(plant)}>Add to Cart</button>
