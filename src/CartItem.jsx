@@ -5,15 +5,12 @@ import './CartItem.css';
 
 const CartItem = ({ onContinueShopping }) => {
   const cart = useSelector(state => state.cart.items);
-  const dispatch = useDispatch();
-
   // Calculate total amount for all products in the cart
   const calculateTotalAmount = () => {
  
   };
 
   const handleContinueShopping = (e) => {
-   test
   };
 
 
@@ -30,9 +27,11 @@ const CartItem = ({ onContinueShopping }) => {
 
   // Calculate total cost based on quantity for an item
   const calculateTotalCost = (item) => {
-          if (item.quantity > 0) {
-      return   item.cost * item.quantity
-          }
+    
+    console.log(item.cost)
+    console.log(item.quantity)
+debugger
+    return   item.cost * item.quantity
   };
 
   return (
